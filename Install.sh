@@ -31,19 +31,19 @@ fi
 # 安装系统
 InstallOS(){
 read -p " 请设置密码:" pw
-if [[ "${model}"="自动" ]]; then
+if [[ "${model}" == "自动" ]]; then
 	model="a"
 else 
 	model="m"
 fi
-if [[ "${country}"="国外" ]]; then
+if [[ "${country}" == "国外" ]]; then
 	country=""
 else 
-	if [[ "${os}"="c" ]]; then
+	if [[ "${os}" == "c" ]]; then
 		country="--mirror http://mirrors.163.com/centos/"
-	elif [[ "${os}"="u" ]]; then
+	elif [[ "${os}" == "u" ]]; then
 		country="--mirror http://mirrors.163.com/ubuntu/"
-	elif [[ "${os}"="d" ]]; then
+	elif [[ "${os}" == "d" ]]; then
 		country="--mirror http://mirrors.163.com/debian/"
 	fi
 fi
