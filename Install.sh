@@ -5,12 +5,12 @@ export PATH
 #=================================================
 #	System Required: CentOS 6/7,Debian 8/9,Ubuntu 16+
 #	Description: 一键重装系统
-#	Version: 1.0.0
+#	Version: 1.0.1
 #	Author: 千影,Vicer
 #	Blog: https://www.94ish.me/
 #=================================================
 
-sh_ver="1.0.0"
+sh_ver="1.0.1"
 github="raw.githubusercontent.com/chiakge/installNET/master"
 
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
@@ -51,7 +51,7 @@ wget --no-check-certificate https://${github}/InstallNET.sh && chmod -x InstallN
 bash InstallNET.sh -${os} ${1} -v ${vbit} -${model} -p ${pw} ${country}
 }
 # 安装系统
-Installadvanced(){
+installadvanced(){
 read -p " 请设置参数:" advanced
 wget --no-check-certificate https://${github}/InstallNET.sh && chmod -x InstallNET.sh
 bash InstallNET.sh $advanced
