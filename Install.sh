@@ -40,11 +40,11 @@ if [[ "${country}" == "国外" ]]; then
 	country=""
 else 
 	if [[ "${os}" == "c" ]]; then
-		country="--mirror http://mirrors.163.com/centos/"
+		country="--mirror https://mirrors.tuna.tsinghua.edu.cn/centos/"
 	elif [[ "${os}" == "u" ]]; then
-		country="--mirror http://mirrors.163.com/ubuntu/"
+		country="--mirror https://mirrors.tuna.tsinghua.edu.cn/ubuntu/"
 	elif [[ "${os}" == "d" ]]; then
-		country="--mirror http://mirrors.163.com/debian/"
+		country="--mirror https://mirrors.tuna.tsinghua.edu.cn/debian/"
 	fi
 fi
 wget --no-check-certificate https://${github}/InstallNET.sh && chmod -x InstallNET.sh
